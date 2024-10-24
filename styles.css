@@ -11,6 +11,8 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* Header Styles */
@@ -325,4 +327,112 @@ footer {
     padding: 20px 0;
     width: 100%;
     fill-opacity: 0.5;
+}
+
+/* Responsif untuk tablet (ukuran layar antara 600px hingga 1024px) */
+@media (max-width: 1024px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .study-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .cta-wrapper {
+        gap: 40px;
+    }
+
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .map-description {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Responsif untuk ponsel (ukuran layar di bawah 600px) */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .home-title {
+        font-size: 32px;
+    }
+
+    .role {
+        font-size: 20px;
+    }
+
+    .home-description {
+        font-size: 16px;
+    }
+
+    .cta-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .study-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+}
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #nav-links.active {
+        display: flex;
+    }
 }

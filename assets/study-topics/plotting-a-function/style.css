@@ -70,7 +70,33 @@ button:hover {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Membatasi ukuran canvas agar tidak keluar dari kontainer */
+.canvas-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
 canvas {
+  max-width: 100%; /* Agar canvas mengikuti lebar kontainer */
+  height: auto; /* Memastikan aspek rasio tetap */
   border: 1px solid #ddd;
   background-color: #fafafa;
+}
+
+/* Media Queries untuk tablet dan ponsel */
+@media (max-width: 600px) {
+  .container {
+      padding: 15px;
+  }
+
+  .input-container {
+      flex-direction: column; /* Susun input dan tombol secara vertikal */
+  }
+
+  button {
+      width: 100%; /* Tombol memenuhi lebar kontainer */
+  }
 }

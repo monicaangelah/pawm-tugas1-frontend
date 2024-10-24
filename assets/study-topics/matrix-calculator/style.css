@@ -104,3 +104,44 @@ button:hover {
     font-weight: 500;
     color: #3B3C59;
 }
+
+/* Responsive untuk tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .matrix-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Responsive untuk smartphone (max-width: 600px) */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .matrix-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    input {
+        width: 45px; /* Ukuran input lebih kecil */
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
